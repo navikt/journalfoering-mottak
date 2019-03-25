@@ -1,0 +1,11 @@
+version: "3"
+services:
+  infotrygd-joark-mottak:
+      build: .
+      image: navikt/krut-joark-mottak:latest
+      environment:
+        PROFILE: local
+      env_file:
+        - secrets.properties
+      ports:
+        - "8086:8080"

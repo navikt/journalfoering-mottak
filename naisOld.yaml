@@ -1,0 +1,31 @@
+name: infotrygd-joark-mottak
+image: repo.adeo.no:5000/isa/infotrygd-joark-mottak
+team: team_isa
+replicas:
+  min: 2
+  max: 4
+port: 8080
+resources:
+  limits:
+    cpu: 1000m
+    memory: 384Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi
+prometheus:
+  enabled: true
+  path: internal/metrics
+fasitResources:
+  used:
+  - alias: infotrygd-joark-mottak-properties
+    resourceType: applicationproperties
+  - alias: infotrygd-joark-mottak
+    resourceType: credential
+  - alias: security-token-service-issuer
+    resourceType: baseUrl
+    propertyMap:
+      url: OIDC_STS_ISSUERURL
+  - alias: JournalfoerInngaaende_v1
+    resourceType: restservice
+  - alias:  eventhaandtering-schema-registry
+    resourceType: baseUrl

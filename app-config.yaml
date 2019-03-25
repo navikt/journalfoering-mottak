@@ -1,0 +1,46 @@
+name: krut-joark-mottak
+image: docker.adeo.no:5000/isa/krut-joark-mottak
+team: isa
+replicas:
+  min: 2
+  max: 4
+port: 8080
+resources:
+  limits:
+    cpu: 1000m
+    memory: 384Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi
+healthcheck:
+  liveness:
+    path: internal/alive
+    initialDelay: 20
+  readiness:
+    path: internal/ready
+    initialDelay: 20
+prometheus:
+  enabled: true
+  path: internal/metrics
+fasitResources:
+  used:
+  - alias: infotrygd-joark-mottak-properties
+    resourceType: applicationproperties
+  - alias: infotrygd-joark-mottak
+    resourceType: credential
+  - alias:  eventhaandtering-schema-registry
+    resourceType: baseUrl
+  - alias: appdynamics
+    resourceType: applicationproperties
+  - alias: journalfoerInngaaende_v1
+    resourceType: restService
+  - alias: security-token-service-issuer
+    resourceType: baseUrl
+  - alias: hent-oppgave
+    resourceType: baseUrl
+  - alias: saf.graphql
+    resourceType: baseUrl
+kafka:
+  consumer:
+    key-deserializer: org.apache.eventhaandtering.common.serialization.StringDeserializer
+    value-deserializer: io.confluent.eventhaandtering.serializers.KafkaAvroDeserializer
