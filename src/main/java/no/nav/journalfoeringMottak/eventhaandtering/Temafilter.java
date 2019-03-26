@@ -1,13 +1,14 @@
-package no.nav.joarkMottak.eventhaandtering;
+package no.nav.journalfoeringMottak.eventhaandtering;
 
-import no.nav.joarkMottak.journalpost.InngaaendeJournalpost;
+import no.nav.journalfoeringMottak.journalpost.InngaaendeJournalpost;
 
 import java.util.Arrays;
 import java.util.List;
 
 class Temafilter {
-    private static final List<String> GENERELLE_TEMAER = Arrays.asList("", "BIL");
-    private static final List<String> INFOTRYGDTEMAER = Arrays.asList("KON", "AGR");
+    private static final List<String> GENERELLE_TEMAER = Arrays.asList("AGR", "BIL");
+    private static final List<String> MANUELL_JOURNALFOERING_TEMAER = Arrays.asList("", "");
+    private static final List<String> INFOTRYGDTEMAER = Arrays.asList("KON", "");
     private static final List<String> ARENATEMAER = Arrays.asList("", "");
 
     private final Kafkaprodusent kafkaprodusent = new Kafkaprodusent();

@@ -1,10 +1,10 @@
-package no.nav.joarkMottak.eventhaandtering;
+package no.nav.journalfoeringMottak.eventhaandtering;
 
 import com.google.gson.Gson;
 import io.confluent.kafka.serializers.AbstractKafkaAvroSerDeConfig;
 import io.confluent.kafka.streams.serdes.avro.GenericAvroDeserializer;
-import no.nav.joarkMottak.journalpost.InngaaendeJournalpost;
-import no.nav.joarkMottak.miljo.Environment;
+import no.nav.journalfoeringMottak.journalpost.InngaaendeJournalpost;
+import no.nav.journalfoeringMottak.miljo.Environment;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -24,7 +24,7 @@ import java.io.File;
 public class JoarkMottak {
 
     private final static Logger LOG = LoggerFactory.getLogger(JoarkMottak.class);
-    private final static String GROUP_ID = "joarkMottak";
+    private final static String GROUP_ID = "journalfoeringMottak";
     private final static String TOPIC = "aapen-dok-journalfoering-v1";
     private final KafkaConsumer<String, GenericRecord> consumer;
     private final Temafilter temafilter = new Temafilter();

@@ -1,7 +1,7 @@
-package no.nav.joarkMottak.eventhaandtering;
+package no.nav.journalfoeringMottak.eventhaandtering;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import no.nav.joarkMottak.journalpost.InngaaendeJournalpost;
+import no.nav.journalfoeringMottak.journalpost.InngaaendeJournalpost;
 import org.apache.kafka.common.serialization.Serializer;
 
 import java.util.Map;

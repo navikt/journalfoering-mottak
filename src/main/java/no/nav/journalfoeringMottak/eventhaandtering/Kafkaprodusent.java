@@ -1,7 +1,7 @@
-package no.nav.joarkMottak.eventhaandtering;
+package no.nav.journalfoeringMottak.eventhaandtering;
 
-import no.nav.joarkMottak.journalpost.InngaaendeJournalpost;
-import no.nav.joarkMottak.miljo.Environment;
+import no.nav.journalfoeringMottak.journalpost.InngaaendeJournalpost;
+import no.nav.journalfoeringMottak.miljo.Environment;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -21,7 +21,7 @@ class Kafkaprodusent {
     private static final Logger LOG = LoggerFactory.getLogger(Kafkaprodusent.class);
     private static final String PRODUSENT_ID = "KrutJoarkProdusent";
     private static final String TOPIC_FEIL_DATAGRUNNLAG = "privat-krut-feilDatagrunnlag-alpha";
-    private static final String TOPIC_GENERELL = "privat-krut-generellHendelse-alpha";
+    private static final String TOPIC_GENERELL = "privat-krut-generellHendelse-beta";
     private static final String TOPIC_INFOTRYGD = "privat-krut-infotrygdhendelse-alpha";
     private static final String TOPIC_ARENA = "privat-krut-arenahendelse-alpha";
     private final KafkaProducer<String, InngaaendeJournalpost> producer;
@@ -55,7 +55,7 @@ class Kafkaprodusent {
     }
 
     void produserGenerellHendelseKafka(final InngaaendeJournalpost inngaaendeJournalpost) {
-        sendKafkamelding(inngaaendeJournalpost, TOPIC_GENERELL);
+        sendKafkamelding(inngaaendeJournalpost, "aapen-dok-journalfoering-v1");
     }
 
     void produserInfotrygdhendelseKafka(final InngaaendeJournalpost inngaaendeJournalpost) {

@@ -1,7 +1,7 @@
-package no.nav.joarkMottak.server;
+package no.nav.journalfoeringMottak.server;
 
 import io.prometheus.client.exporter.MetricsServlet;
-import no.nav.joarkMottak.eventhaandtering.JoarkMottak;
+import no.nav.journalfoeringMottak.eventhaandtering.JoarkMottak;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.HttpConnectionFactory;
 import org.eclipse.jetty.server.Server;

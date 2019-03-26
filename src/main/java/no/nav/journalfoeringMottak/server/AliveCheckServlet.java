@@ -1,4 +1,4 @@
-package no.nav.joarkMottak.server;
+package no.nav.journalfoeringMottak.server;
 
 import javax.servlet.http.*;
 import java.io.IOException;

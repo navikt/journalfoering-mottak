@@ -1,4 +1,4 @@
-package no.nav.joarkMottak.journalpost;
+package no.nav.journalfoeringMottak.journalpost;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
