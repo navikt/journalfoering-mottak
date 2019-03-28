@@ -1,5 +1,5 @@
-name: infotrygd-joark-mottak
-image: repo.adeo.no:5000/isa/infotrygd-joark-mottak
+name: journalfoering-mottak
+image: repo.adeo.no:5000/isa/journalfoering-mottak
 team: team_isa
 replicas:
   min: 2
@@ -17,9 +17,9 @@ prometheus:
   path: internal/metrics
 fasitResources:
   used:
-  - alias: infotrygd-joark-mottak-properties
+  - alias: journalfoering-mottak-properties
     resourceType: applicationproperties
-  - alias: infotrygd-joark-mottak
+  - alias: journalfoering-mottak
     resourceType: credential
   - alias: security-token-service-issuer
     resourceType: baseUrl

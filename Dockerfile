@@ -5,4 +5,4 @@ ADD . .
 RUN mvn clean package shade:shade --settings maven-settings.xml
 
 FROM navikt/java:11
-COPY --from=builder /target/original-infotrygdJoarkMottak.jar app.jar
+COPY --from=builder /target/original-journalfoeringMottak.jar app.jar

@@ -1,5 +1,5 @@
-name: krut-joark-mottak
-image: docker.adeo.no:5000/isa/krut-joark-mottak
+name: journalfoering-mottak
+image: docker.adeo.no:5000/isa/journalfoering-mottak
 team: isa
 replicas:
   min: 2
@@ -24,9 +24,9 @@ prometheus:
   path: internal/metrics
 fasitResources:
   used:
-  - alias: infotrygd-joark-mottak-properties
+  - alias: journalfoering-mottak-properties
     resourceType: applicationproperties
-  - alias: infotrygd-joark-mottak
+  - alias: journalfoering-mottak
     resourceType: credential
   - alias:  eventhaandtering-schema-registry
     resourceType: baseUrl
