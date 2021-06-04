@@ -19,7 +19,7 @@
         <fuel.version>1.15.0</fuel.version>
         <confluent.version>5.0.0</confluent.version>
         <junit.version>4.4</junit.version>
-        <http.version>4.5.5</http.version>
+        <http.version>4.5.13</http.version>
         <slf4j.version>1.7.25</slf4j.version>
         <HikariCP.version>2.7.4</HikariCP.version>
         <version.lombok>1.18.2</version.lombok>
